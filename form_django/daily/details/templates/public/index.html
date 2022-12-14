@@ -22,7 +22,8 @@
 
 
 <div class="container">
-  <form action="/action_page.php">
+  <form action="{% url 'detail:index' %}" method="post">
+    {% csrf_token %}
     <div class="row">
       <div class="col-25">
         <label for="fname">First Name</label>
@@ -61,12 +62,14 @@
     </div>
     <div class="row">
       <input type="submit" value="Submit" class="btn btn-primary btn-lg">
-      <a href="{% url 'signup' %}">Register</a>
+      
      
       
     </div>
+    
   </form>
 </div>
+<a href="{% url 'detail:signup' %}" class="btn btn-dark">Register</a>
 
 </body>
 </html>

@@ -7,7 +7,7 @@ from django.http import HttpResponse
 # def index(request):
 #     return HttpResponse('hello world')
 
-# app_name = 'detail'
+
 
 def index(request):
     return render(request,'public/index.html'
